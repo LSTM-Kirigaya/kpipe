@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import { AddQueueOption, DispatchWorker, KPipelineConfig, TaskState } from './pipe.dto';
 import chalk from 'chalk';
 
-export class KPipe {
+export class OmPipe {
     private configPath = '.pipeline';
     private version = '0.0.1';
     private taskQueue: DispatchWorker[] = [];
@@ -67,9 +67,9 @@ export class KPipe {
         };
     }
 
-    public addTask(
+    public add(
         id: string,
-        worker: (ctx: KPipe) => Promise<any> | any,
+        worker: (ctx: OmPipe) => Promise<any> | any,
         option: AddQueueOption = {}
     ) {
         const state = this.getDefaultState(id, option);

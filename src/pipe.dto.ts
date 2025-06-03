@@ -1,4 +1,4 @@
-import type { KPipe } from "./pipe";
+import type { OmPipe } from "./pipe";
 
 export interface KPipelineConfig {
     name?: string;
@@ -31,7 +31,7 @@ export interface AddQueueOption {
 }
 
 export interface DispatchWorker {
-    worker: (ctx: KPipe) => Promise<any> | any
+    worker: (ctx: OmPipe) => Promise<any> | any
     state: TaskState;
 }
 

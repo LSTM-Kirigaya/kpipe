@@ -1,6 +1,6 @@
 {
   "name": "ompipe",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "light and useful pipeline manager tool for nodejs",
   "main": "index.js",
   "scripts": {

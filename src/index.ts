@@ -1,2 +1,2 @@
-export { KPipe } from './pipe';
+export { OmPipe } from './pipe';
 export * from './pipe.dto';

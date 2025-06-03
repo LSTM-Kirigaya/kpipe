@@ -1,20 +1,24 @@
-import { KPipe } from "./pipe";
+import { OmPipe } from "./pipe";
+
+const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
 async function main() {
-    const pipe = new KPipe('test');
-
-    console.log('begin pipeline');
+    const pipe = new OmPipe('test');
     
-    pipe.addTask('compile', async (ctx) => {
-        await new Promise(resolve => setTimeout(resolve, 1000));
-
+    pipe.add('compile', async (ctx) => {
+        await sleep(1000);
+        // return value will be stored in context persistantly
         return 'hello world';
+
+        // tag this task as critical, if it fails, the pipeline will be stopped
     }, { critical: true });
 
-    pipe.addTask('print something', async (ctx) => {
+    pipe.add('print something', async (ctx) => {
+        // you can get the result of history task by using ctx.getTaskResult(taskName)
+        // even if it has been executed in the past
         const res = ctx.getTaskResult('compile');
-        console.log(res);
-        
+        // this res is "hello world"
+        await sleep(1000);
     });
 
     await pipe.start();
