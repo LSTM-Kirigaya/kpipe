@@ -1,0 +1,30 @@
+{
+  "version": "0.0.1",
+  "name": "kpipe",
+  "scopes": {
+    "test": [
+      {
+        "id": "compile",
+        "status": "success",
+        "startTime": 1748947033960,
+        "endTime": 1748947034962,
+        "result": "hello world",
+        "error": null,
+        "retryCount": 0,
+        "option": {
+          "critical": true
+        }
+      },
+      {
+        "id": "print something",
+        "status": "success",
+        "startTime": 1748947034963,
+        "endTime": 1748947034963,
+        "result": null,
+        "error": null,
+        "retryCount": 0,
+        "option": {}
+      }
+    ]
+  }
+}
