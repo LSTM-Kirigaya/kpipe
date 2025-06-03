@@ -50,7 +50,7 @@ main();
 
 when you run code above first time, you will receive this output:
 
-```
+```bash
 → execute compile ...
 → execute print something ...
 pipeline end
@@ -58,7 +58,7 @@ pipeline end
 
 when you run code again, you will receive this output:
 
-```
+```bash
 ✓ task (compile) is success executed at 2025/6/3 19:00:53, skip
 ✓ task (print something) is success executed at 2025/6/3 19:00:54, skip
 pipeline end
