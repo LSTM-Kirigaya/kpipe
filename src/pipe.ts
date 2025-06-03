@@ -114,7 +114,8 @@ export class OmPipe {
 
             } catch (error) {
                 console.log(chalk.red('task failed'), error);
-                task.state.error = error;
+                const errorMesssage = (error as Error).message;
+                task.state.error = errorMesssage;
             }
 
             // judge if loop continue
